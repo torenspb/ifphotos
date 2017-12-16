@@ -1,0 +1,45 @@
+{% load static %}{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Instagram full-size photos</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar-form" class="navbar navbar-toggleable-md navbar-collapse navbar-inverse fixed-top bg-inverse justify-content-between">
+        <a class="navbar-brand" href="{% url 'index' %}">ifphotos</a>
+        <form class="form-inline username-form" method="POST" action="/">
+            {% csrf_token %} {% render_field form.username class="form-control mr-sm-2" placeholder='instagram username' %}
+            <button class="btn btn-success my-2 my-sm-0 custom-button" type="submit">Get photos</button>
+        </form>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 custom-container">
+                <div class="result-container">
+                    <div class="row">
+                        <div class="col-2"><img src="{% static 'img/404.png' %}"></div>
+                        <div class="col-10">
+                            <h2 class="result-name">Ooops...</h2>
+                            <h4 class="text-secondary result-bio">404</h4>
+                        </div>
+                    </div>
+                    <h4 class="text-secondary result-private">Required page not found</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 arrow-container"><img src=" {% static 'img/arrow.png' %}"></div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>

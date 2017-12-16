@@ -1,0 +1,73 @@
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    margin-left: 10%;
+    font-size: 40px;
+}
+
+.content-container {
+    margin-top: 100px;
+}
+
+.h2.custom-font {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.navbar-custom {
+    text-align: right;
+}
+
+.lead.custom-font {
+    color: #000;
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+.result-container {
+    background: rgba(55, 25, 25, .5);
+    border-radius: 2%;
+}
+
+.result-name {
+    font-size: 3rem;
+    color: #000;
+    padding-left: 20px;
+}
+
+.result-bio {
+    color: #fff;
+    padding-left: 20px;
+}
+
+.result-private {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.result-info {
+    color: #fff;
+    font-size: 1.2rem;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.about-link {
+    color: #fff;
+}
+
+.result-notfound {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+body {
+    background: url('../img/bg.jpg');
+}
+
+body>.container-fluid {
+    padding: 90px 15px 0;
+}
